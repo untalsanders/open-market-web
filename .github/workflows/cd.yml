@@ -17,8 +17,8 @@ jobs:
           node-version: 16
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Print Github Token
-        run: echo ${{ secrets.GITHUB_TOKEN }}
+      - name: Install dependencies
+        run: npm ci
       - name: Deploy to GitHub Pages
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
