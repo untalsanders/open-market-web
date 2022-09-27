@@ -13,10 +13,10 @@ module.exports = {
     entry: './src/app.js',
     devtool: 'inline-source-map',
     devServer: {
-        static: process.env.OUTPUT_DIR || './docs',
+        static: process.env.OUTPUT_DIR || './dist',
     },
     output: {
-        path: path.resolve(__dirname, process.env.OUTPUT_DIR || 'docs'),
+        path: path.resolve(__dirname, process.env.OUTPUT_DIR || 'dist'),
         clean: true,
     },
     module: {
