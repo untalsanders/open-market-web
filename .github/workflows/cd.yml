@@ -1,0 +1,17 @@
+name: Continues Deployment
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        run: |
+          git remote set-url origin https://git:${DEPLOY_TO_GITHUB_PAGES_TOKEN}@github.com/${GIT_REPOSITORY}.git
+          npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_TO_GITHUB_PAGES_TOKEN }}
