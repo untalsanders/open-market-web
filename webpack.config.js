@@ -2,9 +2,9 @@
 
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const dotenv = require('dotenv')
 
 if (process.env.NODE_ENV !== 'production') {
+    const dotenv = require('dotenv')
     dotenv.config()
 }
 
