@@ -2,7 +2,9 @@
 
 import * as ReactDOM from 'react-dom/client'
 
-const element = <h1>Welcome to My Site - Sanders</h1>
+function Welcome({ name }) {
+    return <h1>Hello, {name}</h1>
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(element)
+root.render(<Welcome name="Sanders" />)
