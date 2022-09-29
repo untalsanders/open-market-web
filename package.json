@@ -1,7 +1,7 @@
 {
     "name": "@sandersgutierrez/static-website",
     "version": "0.0.0",
-    "description": "A static site on GitHub Pages with [gh-pages](https://www.npmjs.com/package/gh-pages)",
+    "description": "A static site on GitHub Pages with gh-pages",
     "private": true,
     "keywords": [],
     "author": "Sanders Gutiérrez <ing.sanders@gmail.com> (https://sandersgutierrez.github.io/)",
@@ -38,5 +38,9 @@
     "dependencies": {
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
+    },
+    "engines": {
+        "node": ">=16",
+        "npm": "8"
     }
 }
