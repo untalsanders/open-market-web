@@ -3,7 +3,7 @@
 import * as ReactDOM from 'react-dom/client'
 
 function Welcome({ name }) {
-    return <h1>Hello, {name}</h1>
+    return <h1>Hello {name}, Welcome</h1>
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
