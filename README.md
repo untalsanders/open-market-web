@@ -7,7 +7,7 @@ This is an example about how to deploy a static site on GitHub Pages with [gh-pa
 
 [![Screenshop!](/screenshop.png 'Screenshop')](https://sandersgutierrez.github.io/static-website/)
 
-## Deploy
+## Deploy from local environment
 
 ```sh
 npm run deploy
