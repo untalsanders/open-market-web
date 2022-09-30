@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+        'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#root {
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.card-hero {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.card-hero img {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+}
+
+.card-hero p:first-of-type {
+    font-weight: bolder;
+    font-size: 2.5rem;
+    padding: 5px;
+}
+
+.card-hero nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.card-hero nav a {
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+
+.card-hero nav a:hover {
+    background-color: chocolate;
+    color: white;
+}
+
+.card-hero p:nth-child(4) {
+    color: chocolate;
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+
+.card-hero span a i {
+    padding-right: 0.8rem;
+}
