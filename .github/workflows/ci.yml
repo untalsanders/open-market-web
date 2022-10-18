@@ -1,4 +1,4 @@
-name: Continues Deployment
+name: Continues Integration
 
 on:
   push:
