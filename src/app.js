@@ -3,7 +3,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { Hero } from './components/Hero'
-import './style.css'
+import './style.scss'
 import { data } from '../data'
 
 const root = createRoot(document.getElementById('root'))
