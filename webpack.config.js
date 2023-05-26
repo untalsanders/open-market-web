@@ -3,20 +3,15 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-if (process.env.NODE_ENV !== 'production') {
-    const dotenv = require('dotenv')
-    dotenv.config()
-}
-
 module.exports = {
     mode: process.env.NODE_ENV || 'production',
     entry: './src/app.js',
     devtool: 'inline-source-map',
     devServer: {
-        static: process.env.OUTPUT_DIR || './dist',
+        static: './dist',
     },
     output: {
-        path: path.resolve(__dirname, process.env.OUTPUT_DIR || 'dist'),
+        path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
     module: {
