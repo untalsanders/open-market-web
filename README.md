@@ -1,15 +1,53 @@
-[![Continues Deployment](https://github.com/sandersgutierrez/static-website/actions/workflows/cd.yml/badge.svg)](https://github.com/sandersgutierrez/static-website/actions/workflows/cd.yml)
-[![Continues Integration](https://github.com/sandersgutierrez/static-website/actions/workflows/ci.yml/badge.svg)](https://github.com/sandersgutierrez/static-website/actions/workflows/ci.yml)
-[![pages-build-deployment](https://github.com/sandersgutierrez/static-website/actions/workflows/pages/pages-build-deployment/badge.svg?branch=gh-pages)](https://github.com/sandersgutierrez/static-website/actions/workflows/pages/pages-build-deployment)
+[![CD](https://github.com/sandersgutierrez/products-api-site/actions/workflows/cd.yml/badge.svg)](https://github.com/sandersgutierrez/products-api-site/actions/workflows/cd.yml)
+[![CI](https://github.com/sandersgutierrez/products-api-site/actions/workflows/ci.yml/badge.svg)](https://github.com/sandersgutierrez/products-api-site/actions/workflows/ci.yml)
 
-# Static Site Example
+# Products Site
 
-This is an example about how to deploy a static site on GitHub Pages with [gh-pages](https://www.npmjs.com/package/gh-pages)
+## :tea: Introduction
 
-[![Screenshop!](/screenshop.png 'Screenshop')](https://sandersgutierrez.github.io/static-website/)
+Products-API-Site is a Front-end for the Products API project.
 
-## Deploy from local environment
+| Products-API                                                                      | Products-API Site                                                                                     |
+| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| **Check out the [website](https://sandersgutierrez.github.io/products-api-site)** | **For more information about the API check [here](https://github.com/sandersgutierrez/products-api)** |
 
-```sh
-npm run deploy
+## :checkered_flag: How To Start
+
+1. Clone this repository:
+
+```shell
+git clone https://github.com/sandersgutierrez/products-api-site.git
 ```
+
+2. Install Nodejs. **Go link for install [NVM](https://github.com/nvm-sh/nvm#installing-and-updating)**
+
+```shell
+nvm install --lts
+```
+
+3. Set it a node version as default for project. This use `.nvmrc` file to set a node version as default
+
+```shell
+nvm use
+```
+
+4. Install dependencies
+
+```shell
+npm install
+```
+
+5. Run application
+
+```shell
+# Dev Environment
+npm run dev
+```
+
+## :wolf: Author
+
+- [Sanders Gutiérrez](https://sandersgutierrez.github.io) - System Engineer (Java Developer)
+
+## :unlock: License
+
+This project is open-sourced software licensed under the [MIT licence](LICENSE).
