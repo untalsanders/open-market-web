@@ -2,13 +2,15 @@
 
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     mode: process.env.NODE_ENV || 'production',
     entry: './src/index.js',
     devtool: 'inline-source-map',
     devServer: {
-        static: './dist',
+        static: [path.resolve(__dirname, 'src', 'assets')],
+        compress: true,
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -16,9 +18,10 @@ module.exports = {
     },
     resolve: {
         alias: {
-            App: path.resolve(__dirname, 'src'),
-            Components: path.resolve(__dirname, 'src', 'components'),
-            Styles: path.resolve(__dirname, 'src', 'styles'),
+            '@': path.resolve(__dirname, 'src'),
+            '@assets': path.resolve(__dirname, 'src', 'assets'),
+            '@components': path.resolve(__dirname, 'src', 'components'),
+            '@styles': path.resolve(__dirname, 'src', 'styles'),
         },
     },
     module: {
@@ -45,16 +48,29 @@ module.exports = {
                 test: /\.s[ac]ss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
             },
+            {
+                test: /\.svg$/i,
+                issuer: /\.[jt]sx?$/,
+                use: ['@svgr/webpack'],
+            },
         ],
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Example Static Website',
-            meta: {
-                viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
-            },
-            template: './public/index.html',
             inject: 'body',
+            meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
+            scriptLoading: 'defer',
+            title: 'Products-API Site',
+            template: './public/index.html',
+        }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: 'images/**/*.{png,jpg}',
+                    to: path.resolve(__dirname, 'dist'),
+                    context: path.resolve(__dirname, 'static'),
+                },
+            ],
         }),
     ],
 }
