@@ -3,32 +3,39 @@
 import NetlifyAsset from '@assets/svg/netlify-light.svg'
 import SandersAsset from '@assets/svg/sandersgutierrez-light.svg'
 import Layout from '@components/Layout'
+import AboutPage from '@pages/about'
+import DocumentationPage from '@pages/docs'
+import HomePage from '@pages/home'
+import SupportUsPage from '@pages/support-us'
 import styles from '@styles/Layout.module.scss'
-import { FaTwitter, FaProductHunt } from 'react-icons/fa'
+import { FaProductHunt, FaTwitter } from 'react-icons/fa'
 import { GoHeart, GoMarkGithub } from 'react-icons/go'
 import { GrStatusGoodSmall } from 'react-icons/gr'
+import { Link, Route, Routes } from 'react-router-dom'
 
 export default function App() {
     return (
         <Layout>
             <header className={styles.Header}>
                 <div className={styles.Wrapper}>
-                    <a className={styles.Logo} href="#">
+                    <Link className={styles.Logo} to="/">
                         <FaProductHunt />
                         Product-API
-                    </a>
+                    </Link>
                     <nav className={styles.Navbar}>
-                        <a href="/documentation">Docs</a>
-                        <a href="/about">About</a>
-                        <a href="/support-us">Support Us</a>
+                        <Link to="/documentation">Docs</Link>
+                        <Link to="/about">About</Link>
+                        <Link to="/support-us">Support Us</Link>
                     </nav>
                 </div>
             </header>
             <main className={styles.Main}>
-                <div>
-                    <h1>Product List</h1>
-                    Loading...
-                </div>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/documentation" element={<DocumentationPage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/support-us" element={<SupportUsPage />} />
+                </Routes>
             </main>
             <footer className={styles.Footer}>
                 <div className={styles.ServerStatus}>
