@@ -7,9 +7,9 @@
 
 Products-API-Site is a Front-end for the Products API project.
 
-| Products-API                                                                      | Products-API Site                                                                                     |
-| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| **Check out the [website](https://sandersgutierrez.github.io/products-api-site)** | **For more information about the API check [here](https://github.com/sandersgutierrez/products-api)** |
+| Products-API                                                                                          | Products-API Site                                                                 |
+| ----------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| **For more information about the API check [here](https://github.com/sandersgutierrez/products-api)** | **Check out the [website](https://sandersgutierrez.github.io/products-api-site)** |
 
 ## :checkered_flag: How To Start
 
