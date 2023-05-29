@@ -3,7 +3,7 @@ name: Continues Integration
 on: [push, pull_request]
 
 jobs:
-  deploy:
+  tests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo

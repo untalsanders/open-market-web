@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     mode: process.env.NODE_ENV || 'production',
-    entry: './src/app.js',
+    entry: './src/index.js',
     devtool: 'inline-source-map',
     devServer: {
         static: './dist',
@@ -13,6 +13,13 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
+    },
+    resolve: {
+        alias: {
+            App: path.resolve(__dirname, 'src'),
+            Components: path.resolve(__dirname, 'src', 'components'),
+            Styles: path.resolve(__dirname, 'src', 'styles'),
+        },
     },
     module: {
         rules: [
@@ -46,7 +53,7 @@ module.exports = {
             meta: {
                 viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
             },
-            template: './src/index.html',
+            template: './public/index.html',
             inject: 'body',
         }),
     ],

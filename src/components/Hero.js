@@ -1,5 +1,7 @@
 'use strict'
 
+import styles from 'Styles/Hero.module.scss'
+
 export function Hero({ data, name }) {
     const { links, avatar, repository, message } = data
 
@@ -10,7 +12,7 @@ export function Hero({ data, name }) {
     ))
 
     return (
-        <div className="card-hero">
+        <div className={styles.cardHero}>
             <img src={avatar} />
             <p>Hello {name}, I greet it from GitHub Pages</p>
             <nav>{listItem}</nav>

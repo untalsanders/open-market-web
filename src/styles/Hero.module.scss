@@ -1,0 +1,49 @@
+.cardHero {
+    display: grid;
+    justify-items: center;
+    gap: 1rem;
+
+    img {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+    }
+
+    p {
+        &:first-of-type {
+            font-weight: bolder;
+            font-size: 2.5rem;
+            padding: 5px;
+        }
+
+        &:nth-child(4) {
+            color: chocolate;
+            font-size: 1.8rem;
+            padding: 1rem;
+        }
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+    }
+
+    a {
+        font-size: 1.8rem;
+        padding: 1rem;
+
+        &:hover {
+            background-color: chocolate;
+            color: white;
+        }
+    }
+
+    span {
+        a {
+            i {
+                padding-right: 0.8rem;
+            }
+        }
+    }
+}
