@@ -2,13 +2,12 @@
 
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { Hero } from 'Components/Hero'
-import 'Styles/global.scss'
-import { data } from '../data'
+import App from './App'
+import '@styles/global.scss'
 
 const root = createRoot(document.getElementById('root'))
 root.render(
     <StrictMode>
-        <Hero data={data} name="Sanders" />
+        <App />
     </StrictMode>
 )
