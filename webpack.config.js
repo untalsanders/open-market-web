@@ -4,8 +4,8 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 
-module.exports = {
-    mode: process.env.NODE_ENV || 'production',
+module.exports = (env, argv) => ({
+    mode: argv.mode || 'production',
     entry: './src/index.js',
     devtool: 'inline-source-map',
     devServer: {
@@ -15,6 +15,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
+        publicPath: argv.mode === 'production' ? '/products-api-site' : '',
     },
     resolve: {
         alias: {
@@ -74,4 +75,4 @@ module.exports = {
             ],
         }),
     ],
-}
+})
