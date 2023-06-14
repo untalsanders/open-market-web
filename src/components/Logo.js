@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 export default function Logo() {
     return (
-        <Link className={styles.Logo} to="/">
+        <Link className={styles.Logo} to={BASE_URL}>
             <FaProductHunt />
             Product-API
         </Link>

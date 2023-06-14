@@ -12,10 +12,10 @@ export default function Main() {
         <main>
             <Wrapper>
                 <Routes>
-                    <Route exact path="/" element={<HomePage />} />
-                    <Route path="/documentation" element={<DocumentationPage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/support-us" element={<SupportUsPage />} />
+                    <Route exact path={BASE_URL} element={<HomePage />} />
+                    <Route path={`${BASE_URL}/documentation`} element={<DocumentationPage />} />
+                    <Route path={`${BASE_URL}/about`} element={<AboutPage />} />
+                    <Route path={`${BASE_URL}/support-us`} element={<SupportUsPage />} />
                 </Routes>
             </Wrapper>
         </main>
