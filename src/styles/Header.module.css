@@ -1,6 +1,7 @@
 .Header {
     background-color: #202329;
     color: #e4e4e4;
+    padding-block: 1rem;
 
     & > :first-child {
         display: flex;
@@ -12,7 +13,7 @@
 .Logo {
     display: flex;
     align-items: center;
-    column-gap: 1rem;
+    column-gap: 0.5rem;
     color: inherit;
     font-weight: bold;
 

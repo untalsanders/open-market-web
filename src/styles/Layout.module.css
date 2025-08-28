@@ -1,9 +1,9 @@
 .Layout {
-    min-height: 100vh;
+    min-height: 100dvh;
     display: grid;
     grid-template-rows: min-content auto min-content;
 
-    & > * {
+    > * {
         padding: 2rem 0;
     }
 }

@@ -1,0 +1,36 @@
+.Footer {
+    background-color: #202329;
+    color: white;
+
+    > * {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: 1rem;
+    }
+}
+
+.Copyright {
+    span {
+        font-weight: 300;
+
+        &:nth-child(1) {
+            a {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.FooterLinks {
+    display: flex;
+    align-items: center;
+
+    a {
+        padding: 0.5rem 1rem;
+
+        &:hover {
+            background-color: aquamarine;
+        }
+    }
+}
