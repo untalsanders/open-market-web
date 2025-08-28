@@ -1,21 +1,23 @@
 {
-    "name": "products-api-site",
+    "name": "open-market-web",
     "version": "0.0.0",
-    "description": "Products-API-Site is a Front-end for the Products API project.",
+    "description": "This is a Front-end for the OpenMarket API project.",
     "private": true,
     "keywords": [
         "react",
+        "react-router",
         "api",
         "products taxonamy"
     ],
-    "author": "Sanders Gutiérrez <ing.sanders@gmail.com> (https://sandersgutierrez.github.io/)",
+    "author": "Sanders Gutiérrez <ing.sanders@gmail.com> (https://untalsanders.com)",
     "license": "MIT",
-    "homepage": "https://sandersgutierrez.github.io/products-api-site",
+    "homepage": "https://untalsanders.github.io/open-market-site",
     "scripts": {
-        "build": "webpack --mode=production",
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
         "deploy": "gh-pages -d dist",
-        "dev": "webpack serve --mode=development",
-        "format": "prettier --write .",
+        "fmt": "prettier --write .",
         "lint": "eslint",
         "prepare": "husky install",
         "test": "jest"
@@ -31,9 +33,17 @@
         "@babel/preset-env": "7.28.3",
         "@babel/preset-react": "7.27.1",
         "@svgr/webpack": "8.1.0",
+        "@tsconfig/recommended": "1.0.10",
+        "@types/dotenv-webpack": "7.0.8",
+        "@types/node": "24.3.0",
+        "@types/react": "19.1.11",
+        "@types/react-dom": "19.1.8",
+        "@types/webpack": "5.28.5",
+        "@vitejs/plugin-react-swc": "4.0.1",
         "babel-loader": "10.0.0",
         "copy-webpack-plugin": "13.0.1",
         "css-loader": "7.1.2",
+        "dotenv-webpack": "8.1.1",
         "eslint": "9.34.0",
         "eslint-plugin-react": "7.37.5",
         "favicons-webpack-plugin": "6.0.1",
@@ -45,13 +55,17 @@
         "sass": "1.91.0",
         "sass-loader": "16.0.5",
         "style-loader": "4.0.0",
+        "ts-node": "10.9.2",
+        "typescript": "5.9.2",
+        "vite": "7.1.3",
+        "vite-plugin-svgr": "4.5.0",
         "webpack": "5.101.3",
         "webpack-cli": "6.0.1",
         "webpack-dev-server": "5.2.2"
     },
     "engines": {
         "node": ">=18",
-        "npm": ">=8"
+        "pnpm": ">=9"
     },
-    "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b"
+    "packageManager": "pnpm@10.15.0"
 }
